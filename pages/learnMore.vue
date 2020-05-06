@@ -26,4 +26,20 @@
 </template>
 
 <script>
+export default {
+    /* Sobreescribimos los valores por defecto del head
+    para asegurarnos que tenemos una buena descripción y palabras
+    claves incrustadas como metadatos.
+    Cuaqluier valor puesto aquí sobreescribirá cualquier valor en 
+    el head escrito en el archivo nuxt.config.js*/
+    head(){
+        return {
+            title: `About our websites`,
+            meta: [
+                { hid: 'description', name:'description', content: 'WebsiteCo provides the finest in modern websites' },
+                { name: 'keywords', content: 'websiteCo, websites, website design' }
+            ]
+        }
+    }
+}
 </script>  
