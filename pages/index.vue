@@ -8,6 +8,7 @@
     <!-- nuxt-link es para crear links entre las páginas de nuestra aplicación -->
     <nuxt-link to="/learnMore" class="callToAction">Learn More</nuxt-link>
     <nuxt-link to="/progress" class="callToAction">See Our Progress</nuxt-link>
+    <nuxt-link to="/contact" class="callToAction">Contact Us</nuxt-link> 
 
   </div>
 </template>
