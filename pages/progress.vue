@@ -5,14 +5,25 @@
 
          <p>{{ statusUpdate }}</p>
          <p>{{ statusDate }}</p>  
-  
 
+         <p>This is our current progress:</p>
+         <ProgressBar></ProgressBar>
+
+         <br>
+         <p>Who is working right now in this?</p>
+
+         <p>Developer: {{ barInfo.owner }}</p>
+         <p>Age: {{ barInfo.age }}</p>
+         <p>Location: {{ barInfo.location }}</p>
+  
         <nuxt-link to="/" class="callToAction">Go Back</nuxt-link>
     </div>
 </template>
 
 <script>
+import ProgressBar from '../components/ProgressBar';
 const axios = require('axios');
+
 export default {
     // We need to use "asyncData" to make the axios call
     asyncData({ params }){
@@ -23,6 +34,18 @@ export default {
                 statusDate: res.data.statusDate
             }
         })
+    },
+    components: {
+        ProgressBar
+    },
+    data(){
+        return {
+            barInfo: {
+                owner: 'John',
+                age: 43,
+                location: 'Virginia'  
+            }
+        }
     }
 }
 </script>

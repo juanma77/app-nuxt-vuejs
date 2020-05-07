@@ -28,6 +28,7 @@
                 <label for="exampleFormControlTextarea1">Write a message</label>
                 <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
             </div>
+            <button type="submit" class="btn btn-success">Submit</button>
         </form>
         <nuxt-link to="/" class="callToAction">Go Back</nuxt-link>
     </div>
